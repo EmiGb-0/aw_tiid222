@@ -7,10 +7,10 @@
 
     <style>
         h1 {
-            color: blue;
+            color: white;
         }
         h2 {
-            color: green;
+            color: white;
         }
         h3 {
             color: red;
@@ -25,20 +25,23 @@
             color: pink;
         }
 
-        div {
-            background-color: #5d0101;
-            padding-left: 25px;
-            padding-top: 10px;
-            padding-bottom: 10px;
+
+
+        .seccion1 {
+             background-color: #5d0101;
+            padding: 20px;  
+            margin: 20px;
+            color: #fff;
+            border: 10px solid black;
         }
 
-        div h2 {
-            color: white;
-        }
-
-        div p {
-            color: white;
-            font-style: italic;
+        .seccion2 {
+            background-color: #01015d;
+            padding-left: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            color: #fff;
         }
     </style>
 </head>
@@ -52,9 +55,14 @@
 
     <hr>
 
-    <div>
+    <div class="seccion1">
         <h2>TItulo del parrafo</h2>
-        <p>Bienvenido a mi sitio web</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nesciunt laudantium dicta veniam fugit dolores quod voluptatem, asperiores eaque aspernatur sequi fuga officiis vero? Obcaecati deleniti recusandae quaerat blanditiis odit?</p>
+    </div>
+
+    <div class="seccion2">
+        <h2>TItulo del parrafo</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nesciunt laudantium dicta veniam fugit dolores quod voluptatem, asperiores eaque aspernatur sequi fuga officiis vero? Obcaecati deleniti recusandae quaerat blanditiis odit?</p>
     </div>
 </body>
 </html>
