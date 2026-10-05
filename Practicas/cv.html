@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Emiliano Gonzalez</title>
+    <style>
+        :root {
+            --azul-oscuro: #193a68;
+            --azul-encabezado: #c8d8eb;
+            --azul-lateral: #edf4fd;
+            --texto: #292929;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #181818;
+            color: var(--texto);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .cv {
+            width: min(100%, 760px);
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0 0 18px rgba(0, 0, 0, .28);
+        }
+
+        .encabezado {
+            min-height: 155px;
+            display: flex;
+            align-items: center;
+            gap: 45px;
+            padding: 20px 45px 20px 55px;
+            background: var(--azul-encabezado);
+        }
+
+        .foto {
+            flex: 0 0 135px;
+        }
+
+        .foto img {
+            display: block;
+            width: 135px;
+            height: 135px;
+            object-fit: cover;
+            border: 0;
+            border-radius: 50%;
+        }
+
+        .nombre h1 {
+            max-width: 300px;
+            margin: 0;
+            color: var(--azul-oscuro);
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            line-height: 1.08;
+        }
+
+        .nombre h2 {
+            margin: 22px 0 0;
+            color: var(--azul-oscuro);
+            font-size: .95rem;
+            letter-spacing: 3px;
+            font-weight: 700;
+        }
+
+        .contenido {
+            display: grid;
+            grid-template-columns: 40% 60%;
+        }
+
+        .col-izquierda,
+        .col-derecha {
+            padding: 30px 32px;
+        }
+
+        .col-izquierda {
+            background: var(--azul-lateral);
+        }
+
+        .col-derecha {
+            background: #fff;
+        }
+
+        section {
+            margin: 0 0 34px;
+        }
+
+        section:last-child {
+            margin-bottom: 0;
+        }
+
+        h3 {
+            margin: 0 0 19px;
+            color: var(--azul-oscuro);
+            font-size: 1.05rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        h3::after {
+            content: "";
+            display: block;
+            width: 66px;
+            height: 3px;
+            margin-top: 12px;
+            background: var(--azul-oscuro);
+        }
+
+        p,
+        li {
+            font-size: .82rem;
+            line-height: 1.5;
+        }
+
+        p {
+            margin: 0 0 16px;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 19px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        .contacto {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contacto li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+            font-size: .75rem;
+        }
+
+        .icono {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 22px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--azul-oscuro);
+            color: #fff;
+            font-size: .75rem;
+        }
+
+        .experiencia {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .experiencia > li {
+            padding-left: 2px;
+            margin-bottom: 23px;
+        }
+
+        .experiencia > li:last-child {
+            margin-bottom: 0;
+        }
+
+        .experiencia strong {
+            display: block;
+            margin-bottom: 7px;
+            color: #151515;
+            font-size: .83rem;
+            text-transform: uppercase;
+        }
+
+        .empresa {
+            display: block;
+            margin-bottom: 9px;
+            color: #444;
+            font-size: .76rem;
+        }
+
+        .educacion li {
+            margin-bottom: 15px;
+        }
+
+        .educacion strong {
+            display: block;
+        }
+
+        @media (max-width: 680px) {
+            body {
+                padding: 0;
+            }
+
+            .encabezado {
+                gap: 25px;
+                padding: 25px;
+            }
+
+            .foto,
+            .foto img {
+                width: 135px;
+                height: 135px;
+                flex-basis: 135px;
+            }
+
+            .nombre h2 {
+                font-size: .7rem;
+                letter-spacing: 1.5px;
+            }
+
+            .contenido {
+                grid-template-columns: 1fr;
+            }
+
+            .col-izquierda,
+            .col-derecha {
+                padding: 30px 25px;
+            }
+        }
+
+        @media (max-width: 430px) {
+            .encabezado {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="cv">
+        <header class="encabezado">
+            <div class="foto">
+                <img src="../img/cv_img.png" alt="Fotografía de Emiliano Gonzalez">
+            </div>
+            <div class="nombre">
+                <h1>Emiliano<br>Gonzalez</h1>
+                <h2>DESARROLLADOR WEB</h2>
+            </div>
+        </header>
+
+        <div class="contenido">
+            <aside class="col-izquierda">
+                <section>
+                    <h3>Contacto</h3>
+                    <ul class="contacto">
+                        <li><span class="icono">☎</span>(55) 1234-5678</li>
+                        <li><span class="icono">@</span>hola@sitiorecreible.com</li>
+                        <li><span class="icono">◉</span>www.sitiorecreible.com</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Habilidades</h3>
+                    <ul>
+                        <li>Liderazgo</li>
+                        <li>Comunicación asertiva</li>
+                        <li>Gestión de activos</li>
+                        <li>Resolución de problemas</li>
+                        <li>Elaboración de reportes</li>
+                        <li>Trabajo en equipo</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Educación</h3>
+                    <ul class="educacion">
+                        <li>
+                            <strong>Licenciatura en Desarrollo Web</strong>
+                            Universidad Alta Pinta<br>
+                            2010-2014
+                        </li>
+                        <li>
+                            <strong>Diplomado en Tecnología</strong>
+                            Universidad Alta Pinta<br>
+                            2014-2016
+                        </li>
+                    </ul>
+                </section>
+            </aside>
+
+            <div class="col-derecha">
+                <section>
+                    <h3>Acerca de mí</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla facilisi morbi tempus iaculis urna id volutpat lacus.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                </section>
+
+                <section>
+                    <h3>Experiencia laboral</h3>
+                    <ul class="experiencia">
+                        <li>
+                            <strong>Área de desarrollo web</strong>
+                            <span class="empresa">Empresa Borcelle<br>2020-2022</span>
+                            Eu augue ut lectus arcu bibendum at varius vel pharetra vel turpis nunc eget lorem dolor sed viverra ipsum nunc.
+                        </li>
+                        <li>
+                            <strong>Área de desarrollo web</strong>
+                            <span class="empresa">Empresa Borcelle<br>2022-2024</span>
+                            Eu augue ut lectus arcu bibendum at varius vel pharetra vel turpis nunc eget lorem dolor sed viverra ipsum nunc.
+                        </li>
+                        <li>
+                            <strong>Área de desarrollo web</strong>
+                            <span class="empresa">Empresa Borcelle<br>2024-2026</span>
+                            Eu augue ut lectus arcu bibendum at varius vel pharetra vel turpis nunc eget lorem dolor sed viverra ipsum nunc.
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
