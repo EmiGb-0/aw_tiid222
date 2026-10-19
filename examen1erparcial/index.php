@@ -126,6 +126,7 @@
                             <th>Autor</th>
                             <th>Pagina</th>
                             <th>Precio</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -136,6 +137,9 @@
                                 <td><?php echo $row['autor']; ?></td>
                                 <td><?php echo $row['paginas']; ?></td>
                                 <td><?php echo $row['precio']; ?></td>
+                                <td>
+                                    <a href="eliminar.php?id=<?php echo $row['id']; ?>">Eliminar</a>
+                                </td>
                             </tr>
                         <?php } ?>
                     </tbody>
