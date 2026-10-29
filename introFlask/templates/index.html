@@ -3,24 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Dashboard</title>
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='style.css') }}"
     />
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
   </head>
-  <body>
-    <h1>Welcome to the App</h1>
-    <div>
-        
-        <form action="/logout">
+  <body class="min-h-screen flex items-center justify-center bg-base-200 p-4">
+    <div
+      class="card w-full max-w-md bg-base-100 shadow-xl p-8 text-center space-y-6"
+    >
+      <h1 class="text-3xl font-bold tracking-tight text-base-content">
+        Flask P2
+      </h1>
 
-            <button class="btn btn-warning" type="submit">Logout</button>
+      <div>
+        <form action="/logout" method="GET">
+          <button class="btn btn-warning w-full" type="submit">Logout</button>
         </form>
+      </div>
     </div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
 </html>

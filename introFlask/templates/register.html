@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+</head>
+<body class="min-h-screen flex items-center justify-center bg-base-200 p-4">
+
+    <form class="form-control card w-full max-w-sm bg-base-100 shadow-xl p-6 gap-3" action="/register" method="POST">
+        <h2 class="text-2xl font-bold text-center mb-4">Registro</h2>
+        <label class="label pb-0" for="nombre">
+            <span class="label-text font-semibold">Nombre:</span>
+        </label>
+        <input class="input input-bordered w-full" type="text" id="nombre" name="nombre" required>
+
+        <label class="label pb-0" for="apellido_p">
+            <span class="label-text font-semibold">Apellido Paterno</span>
+        </label>
+        <input class="input input-bordered w-full" type="text" id="apellido_p" name="apellido_p" required>
+
+        <label class="label pb-0" for="apellido_m">
+            <span class="label-text font-semibold">Apellido Materno</span>
+        </label>
+        <input class="input input-bordered w-full" type="text" id="apellido_m" name="apellido_m" required>
+
+        <label class="label pb-0" for="correo">
+            <span class="label-text font-semibold">Correo</span>
+        </label>
+        <input class="input input-bordered w-full" type="email" id="correo" name="correo" required>
+
+        <label class="label pb-0" for="contraseña">
+            <span class="label-text font-semibold">Contraseña</span>
+        </label>
+        <input class="input input-bordered w-full" type="password" id="contraseña" name="contraseña" required>
+
+        <label class="label pb-0" for="id_rol">
+            <span class="label-text font-semibold">Tipo de usuario</span>
+        </label>
+        <select class="select select-bordered w-full" name="id_rol" id="id_rol">
+            <option value="1">Administrador</option>
+            <option value="2">Usuario</option>
+        </select>
+
+        <button class="btn btn-primary mt-4" type="submit">Registrarse</button>
+
+        <a class="link link-primary" href="{{ url_for('login') }}">¿Ya tienes una cuenta? Inicia sesión</a>
+    </form>
+    
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</html>
